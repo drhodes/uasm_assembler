@@ -124,5 +124,3 @@ flycheck_*.el
 
 # projectiles files
 .projectile./lexer
-lexer
-assembler
