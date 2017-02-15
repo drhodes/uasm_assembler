@@ -1,0 +1,11 @@
+.macro WORD(x) x%0x100 (x>>8)%0x100
+.macro LONG(x) WORD(x) WORD(x >> 16)  // little-endian for Maybe
+
+.macro betaop(OP,RA,RB,RC) {
+       .align 4
+       LONG((OP<<26)+((RC%0x20)<<21)+((RA%0x20)<<16)+((RB%0x20)<<11))
+}
+
+.macro ADD(RA, RB, RC)          betaop(0x20,RA,RB,RC)
+
+ADD(1,2,3)

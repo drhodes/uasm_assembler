@@ -1,0 +1,3 @@
+.include "beta.uasm"
+
+ADD(r0, r0, r1)

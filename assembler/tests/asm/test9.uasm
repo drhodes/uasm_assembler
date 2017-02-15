@@ -1,0 +1,3 @@
+.macro Test1(A) 2 3 5
+.macro Test1(A, B) 7 11 13
+Test1(0)

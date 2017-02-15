@@ -1,0 +1,7 @@
+.=1
+.macro Hmm() {
+       . = . + 2
+       out + out
+}
+Hmm()
+out: 

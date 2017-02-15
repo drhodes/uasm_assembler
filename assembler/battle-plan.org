@@ -1,0 +1,27 @@
+
+* Plan
+
+** How to .include?
+use a -include switch
+
+** Dot assignments for program counter manipulation
+when generating() assignments, usually nothing is emitted.  There is
+one exception, that is with dot assignments.  
+
+.=.+4
+
+this should notify the assembler to increment the program counter.
+
+** How to do macros 
+*** Macro observations
+
+**** macros don't return values
+**** they can expand other macros.
+**** Overriding
+the macro bindings override global symbols within the scope of the
+macro.  OK, so when replacing idents, it's important to prevser the
+idents inside the macro ast that are contained the macro argument list.
+
+**** Macros can't define their own macros.
+**** Macros can't introduce symbols into main symbol table.
+**** Macros maintain a local symbol table.

@@ -1,4 +1,4 @@
-rm -f `find ./ -type f | grep ~$`
-rm -f `find ./ -type f | grep \.pyc$`
+find -type f -name "*~" -delete
+find -type f -name "*.pyc" -delete
 rm -rf __pycache__
 

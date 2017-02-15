@@ -1,0 +1,19 @@
+.macro PUTFRAME(REG, OFFSET)  ST(REG, OFFSET, bp)
+
+.macro extract_field1 (RA, M, N, RB) {
+       a = 10
+       b = 10
+}
+
+.macro betaop(OP,RA,RB,RC) {
+          .align 4
+          LONG((OP<<26)+((RC%0x20)<<21)+((RA%0x20)<<16)+((RB%0x20)<<11))
+}
+
+.macro betaopc(OP,RA,CC,RC) {
+          .align 4
+          LONG((OP<<26)+((RC%0x20)<<21)+((RA%0x20)<<16)+(CC%0x10000))
+}
+                    
+
+
