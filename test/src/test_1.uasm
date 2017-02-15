@@ -1,0 +1,7 @@
+.include "beta.uasm"
+.include "test_2.uasm"
+
+// .include "badfile"
+
+
+ADD(R0, R0, R0)
